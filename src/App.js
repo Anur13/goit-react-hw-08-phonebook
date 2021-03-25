@@ -27,7 +27,6 @@ const App = () => {
     dispatch(getCurrentUser());
   }, []);
   const loader = useSelector(state => selectors.getLoading(state));
-  console.log(loader);
   return (
     <div className="container">
       <Suspense fallback={<p>loading...</p>}>
@@ -55,7 +54,7 @@ const App = () => {
           <PrivateRoute
             path={routes.contactsPage}
             component={PhoneBookContainer}
-            redirect="/login"
+            redirect={routes.loginPage}
           />
         </Switch>
         <div className="container">
