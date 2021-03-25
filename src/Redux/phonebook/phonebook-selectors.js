@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 import { useSelector } from 'react-redux';
+import { useMemo } from 'react';
 const getContactItem = state => state.contacts.items;
 const getContactsFilter = state => state.contacts.filter;
 const getLoading = state => state.contacts.loading;

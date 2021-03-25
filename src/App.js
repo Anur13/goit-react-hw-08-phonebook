@@ -11,9 +11,11 @@ import { getCurrentUser } from './Redux/phonebook/phonebook-operations';
 import selectors from '../src/Redux/phonebook/phonebook-selectors';
 import routes from './routes';
 
-const HomePage = lazy(() => import('./Pages/HomePage'));
-const LoginPage = lazy(() => import('./Pages/LoginPage'));
-const RegistrationPage = lazy(() => import('./Pages/RegistrationPage'));
+const HomePage = lazy(() => import('./Pages/HomePage/HomePage'));
+const LoginPage = lazy(() => import('./Pages/LoginPage/LoginPage'));
+const RegistrationPage = lazy(() =>
+  import('./Pages/RegistrationPage/RegistrationPage'),
+);
 const PhoneBookContainer = lazy(() =>
   import('./Components/PhoneBookContainer/PhoneBookContainer.js'),
 );
